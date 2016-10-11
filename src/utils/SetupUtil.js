@@ -92,7 +92,7 @@ export default {
     while (true) {
       try {
         router.get().transitionTo('setup');
-        docker.setup('localhost');
+        docker.setup('172.22.12.181','default');
         setupServerActions.started({started: true});
         this.simulateProgress(5);
         metrics.track('Native Setup Finished');
